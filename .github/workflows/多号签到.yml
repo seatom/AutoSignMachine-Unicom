@@ -6,7 +6,7 @@ on:
 #    - cron: '*/30 20-23,0-16 * * *' # cron表达式，Actions时区是UTC时间，所以要往前推8个小时(4-23)
  #   - cron: '* 0,8,18 * * *'
 schedule:
-    - cron: '00 19 * * *'  # 对应3：00
+    - cron: '01 3,11,19 * * *'  # 每天运行三次
 jobs:
   daily-task:
     if: github.event.repository.owner.id == github.event.sender.id
